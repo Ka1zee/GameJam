@@ -405,6 +405,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0
+  _points:
+  - {fileID: 4527290433859265698}
+  - {fileID: 1038291922072387213}
+  - {fileID: 4838999270546358887}
+  _coin: {fileID: 567001348036241743, guid: 674fc2a8163eff24aa8b31cdc0e7d7e9, type: 3}
 --- !u!1 &9103283393914745652
 GameObject:
   m_ObjectHideFlags: 0

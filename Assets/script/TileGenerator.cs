@@ -8,7 +8,13 @@ public class TileGenerator : MonoBehaviour
     [SerializeField] private GameObject _tilePrefab;
     [SerializeField] private float _speed;
     [SerializeField] private int _maxCount;
-    [SerializeField] private List<Tile> _tiles = new List<Tile>();
+    [SerializeField] private List<Tile> _tiles = new List<Tile>(); 
+    [SerializeField] private Transform _tileHolder;
+    [SerializeField] private GameObject _coin;
+    [SerializeField] private GameObject _bomb;
+    [SerializeField] private float _startSpawnBomb = 3;
+
+    private float _timer;
     void Start()
     {
         _tiles.First().speed = _speed;
@@ -20,7 +26,9 @@ public class TileGenerator : MonoBehaviour
 
     void Update()
     {
-        if(_tiles.Count < _maxCount)
+        _timer += Time.deltaTime;
+
+        if (_tiles.Count < _maxCount)
         {
             GenerateTile();
         }
@@ -29,8 +37,10 @@ public class TileGenerator : MonoBehaviour
     {
         GameObject newTileObject = Instantiate(_tilePrefab, _tiles.Last().transform.position + Vector3.forward * _tilePrefab.transform.localScale.z, Quaternion.identity);
         Tile newTile = newTileObject.GetComponent<Tile>();
+        newTile.initialize(_coin, _bomb, _startSpawnBomb, _timer);
         newTile.speed = _speed;
         _tiles.Add(newTile);
+        newTileObject.transform.SetParent(_tileHolder);
     }
 
     private void OnTriggerEnter(Collider other)

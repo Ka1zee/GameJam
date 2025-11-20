@@ -119,6 +119,37 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &657307075
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 657307076}
+  m_Layer: 0
+  m_Name: Tile holder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &657307076
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 657307075}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -6.283004, y: -2.659448, z: 5.066731}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1053659711
 GameObject:
   m_ObjectHideFlags: 0
@@ -155,6 +186,10 @@ MonoBehaviour:
   _maxCount: 20
   _tiles:
   - {fileID: 1072186749}
+  _tileHolder: {fileID: 657307076}
+  _coin: {fileID: 567001348036241743, guid: 674fc2a8163eff24aa8b31cdc0e7d7e9, type: 3}
+  _bomb: {fileID: 9016264727487768065, guid: 54d7e0279a604e444bdc77fe82ddeac2, type: 3}
+  _startSpawnBomb: 0
 --- !u!4 &1053659713
 Transform:
   m_ObjectHideFlags: 0
@@ -520,7 +555,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 801bc899c2270a04e94925d11182cdd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 5
+  _speed: 3
   _characterController: {fileID: 1690722470}
 --- !u!143 &1690722470
 CharacterController:
@@ -704,3 +739,4 @@ SceneRoots:
   - {fileID: 2320432343705874566}
   - {fileID: 1053659713}
   - {fileID: 1690722474}
+  - {fileID: 657307076}

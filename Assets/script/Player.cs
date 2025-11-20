@@ -15,4 +15,8 @@ public class Player : MonoBehaviour
     {
         _characterController.Move(Vector3.right * _speed * Input.GetAxis("Horizontal") * Time.deltaTime);
     }
+    public void Die()
+    {
+        print("Die");
+    }
 }
