@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class TileGenerator : MonoBehaviour
 {
+    public float speed => _speed; // лише для читання
     [SerializeField] private GameObject _tilePrefab;
     [SerializeField] private float _speed;
     [SerializeField] private int _maxCount;
