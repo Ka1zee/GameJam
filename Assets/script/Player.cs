@@ -4,16 +4,15 @@ public class Player : MonoBehaviour
 {
     [SerializeField] private float _speed = 5f;
     [SerializeField] private CharacterController _characterController;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
-        _characterController.Move(Vector3.right * _speed * Input.GetAxis("Horizontal") * Time.deltaTime);
+        if (_characterController != null && _characterController.enabled && _characterController.gameObject.activeInHierarchy)
+        {
+            float horizontal = Input.GetAxis("Horizontal");
+            Vector3 move = Vector3.right * _speed * horizontal * Time.deltaTime;
+            _characterController.Move(move);
+        }
     }
     public void Die()
     {
