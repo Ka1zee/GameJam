@@ -1,22 +1,22 @@
 using UnityEngine;
 using TMPro;
 
-
 public class DistanceCounter : MonoBehaviour
 {
     public TMP_Text distanceText;
 
-    public float distance;       // пройдена дистанція
+    public float distance;
 
-    private TileGenerator _tileGenerator; // посилання на твій TileGenerator
+    private TileGenerator _tileGenerator;
+
+    private bool _isPaused = false;
 
     void Start()
     {
-        // знаходимо TileGenerator на сцені
         _tileGenerator = Object.FindFirstObjectByType<TileGenerator>();
         if (_tileGenerator == null)
         {
-            Debug.LogError("TileGenerator не знайдено на сцені!");
+            Debug.LogError("TileGenerator не найден в сцене!");
         }
     }
 
@@ -24,15 +24,19 @@ public class DistanceCounter : MonoBehaviour
     {
         if (_tileGenerator != null)
         {
-            // беремо швидкість з TileGenerator
-            float speed = _tileGenerator.speed;
+            if (!_isPaused)
+            {
+                float speed = _tileGenerator.speed;
+                distance += speed * Time.deltaTime;
+            }
 
-            // рахуємо дистанцію
-            distance += speed * Time.deltaTime;
-
-            // виводимо у текстовий рядок (округлюємо до цілих)
             if (distanceText != null)
                 distanceText.text = Mathf.FloorToInt(distance).ToString();
         }
+    }
+
+    public void SetPaused(bool paused)
+    {
+        _isPaused = paused;
     }
 }
