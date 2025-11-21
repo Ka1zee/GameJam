@@ -13,8 +13,9 @@ public class Coin : MonoBehaviour
     {
         
     }
-    private void OnTriggerEnter(Collider other)
+    public void OnTriggerEnter(Collider other)
     {
-       Destroy(gameObject);
+        FindObjectOfType<GameManager>().AddCoin();
+        Destroy(gameObject);
     }
 }

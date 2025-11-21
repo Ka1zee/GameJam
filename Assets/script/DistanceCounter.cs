@@ -5,12 +5,13 @@ public class DistanceCounter : MonoBehaviour
 {
     public TMP_Text distanceText;
 
-    public float distance;
+    private float _distance = 0f;
 
     private TileGenerator _tileGenerator;
 
     private bool _isPaused = false;
 
+    public float Distance => _distance;
     void Start()
     {
         _tileGenerator = Object.FindFirstObjectByType<TileGenerator>();
@@ -27,11 +28,11 @@ public class DistanceCounter : MonoBehaviour
             if (!_isPaused)
             {
                 float speed = _tileGenerator.speed;
-                distance += speed * Time.deltaTime;
+                _distance += speed * Time.deltaTime;
             }
 
             if (distanceText != null)
-                distanceText.text = Mathf.FloorToInt(distance).ToString();
+                distanceText.text = Mathf.FloorToInt(_distance).ToString();
         }
     }
 
