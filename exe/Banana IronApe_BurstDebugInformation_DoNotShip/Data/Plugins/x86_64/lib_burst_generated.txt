@@ -9,7 +9,7 @@ Library: G:\gamejam\My project\Temp\BurstOutput\Data\Plugins\x86_64\lib_burst_ge
 --float-precision=Standard
 --target-framework=NetFramework
 --float-mode=Fast
---linker-options=PdbAltPath="My project_Data/Plugins/x86_64/lib_burst_generated.pdb"
+--linker-options=PdbAltPath="Banana IronApe_Data/Plugins/x86_64/lib_burst_generated.pdb"
 --generate-link-xml=Temp\burst.link.xml
 --temp-folder=G:\gamejam\My project\Temp\Burst
 --key-folder=G:/unity/6000.0.37f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport
@@ -29,7 +29,7 @@ Library: G:\gamejam\My project\Temp\BurstOutput\Data\Plugins\x86_64\lib_burst_ge
 --float-precision=Standard
 --target-framework=NetFramework
 --float-mode=Fast
---linker-options=PdbAltPath="My project_Data/Plugins/x86_64/lib_burst_generated.pdb"
+--linker-options=PdbAltPath="Banana IronApe_Data/Plugins/x86_64/lib_burst_generated.pdb"
 --generate-link-xml=Temp\burst.link.xml
 --temp-folder=G:\gamejam\My project\Temp\Burst
 --key-folder=G:/unity/6000.0.37f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport
@@ -47,7 +47,7 @@ Library: G:\gamejam\My project\Temp\BurstOutput\Data\Plugins\x86_64\lib_burst_ge
 --dump=Function
 --float-precision=Standard
 --target-framework=NetFramework
---linker-options=PdbAltPath="My project_Data/Plugins/x86_64/lib_burst_generated.pdb"
+--linker-options=PdbAltPath="Banana IronApe_Data/Plugins/x86_64/lib_burst_generated.pdb"
 --generate-link-xml=Temp\burst.link.xml
 --temp-folder=G:\gamejam\My project\Temp\Burst
 --key-folder=G:/unity/6000.0.37f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport
@@ -153,7 +153,7 @@ Library: G:\gamejam\My project\Temp\BurstOutput\Data\Plugins\x86_64\lib_burst_ge
 --dump=Function
 --float-precision=Standard
 --target-framework=NetFramework
---linker-options=PdbAltPath="My project_Data/Plugins/x86_64/lib_burst_generated.pdb"
+--linker-options=PdbAltPath="Banana IronApe_Data/Plugins/x86_64/lib_burst_generated.pdb"
 --generate-link-xml=Temp\burst.link.xml
 --temp-folder=G:\gamejam\My project\Temp\Burst
 --key-folder=G:/unity/6000.0.37f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport
