@@ -18,6 +18,7 @@ public class Bomb : MonoBehaviour
         if (other.TryGetComponent(out Player player))
         {             
             player.Die();
+            Destroy(gameObject);
         }
 
     }

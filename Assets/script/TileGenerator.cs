@@ -16,6 +16,7 @@ public class TileGenerator : MonoBehaviour
     [SerializeField] private float _startSpawnBomb = 3;
 
     private float _timer;
+    private bool _isEnabling = true;
     void Start()
     {
         _tiles.First().speed = _speed;
@@ -27,11 +28,23 @@ public class TileGenerator : MonoBehaviour
 
     void Update()
     {
+        if (_isEnabling == false)
+            return;
+
         _timer += Time.deltaTime;
 
         if (_tiles.Count < _maxCount)
         {
             GenerateTile();
+        }
+    }
+
+    public void SetEnabling(bool state)
+    {
+        _isEnabling = state;
+        foreach(Tile tile in _tiles)
+        {
+            tile.SetMoving(state);
         }
     }
     private void GenerateTile()

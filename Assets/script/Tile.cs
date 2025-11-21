@@ -13,6 +13,7 @@ public class Tile : MonoBehaviour
     private GameObject _bomb;
     private float _startSpawnBomb;
     private float _timer;
+    private  bool _isMove =true;
     void Start()
     {
         if(_coin == null || _bomb == null)
@@ -45,6 +46,8 @@ public class Tile : MonoBehaviour
     }
     void FixedUpdate()
     {
+        if (_isMove == false)
+            return;
         transform.Translate(Vector3.back * speed * Time.fixedDeltaTime);
     }
     public void initialize(GameObject coin, GameObject bomb, float startSpawnBomb, float timer)
@@ -53,5 +56,9 @@ public class Tile : MonoBehaviour
         _bomb = bomb;
         _timer = timer;
         _startSpawnBomb = startSpawnBomb;
+    }
+    public void SetMoving(bool state)
+    {
+        _isMove = state;
     }
 }
